@@ -48,6 +48,18 @@
             border-radius: var(--radius);
             padding: 20px;
             margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .facilitator img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--brand);
         }
 
         .facilitator h4 {
@@ -59,6 +71,14 @@
             margin: 0;
             color: var(--muted);
             font-size: 0.95rem;
+        }
+
+        .facilitator .affiliation {
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.9;
+            margin-bottom: 10px;
+            line-height: 1.4;
         }
 
         .key-details {
@@ -203,14 +223,32 @@
 
                 <h2>About the Facilitators</h2>
                 <div class="facilitator">
-                    <h4>Prof. Arosha Adhikaram</h4>
-                    <p>Senior academic with extensive experience supervising, mentoring, and examining postgraduate
-                        researchers.</p>
+                    <img src="../../images/people/Arosha-Adhikaram.jpeg" alt="Prof. Arosha Adhikaram" loading="lazy">
+                    <div>
+                        <h4>Prof. Arosha Adhikaram</h4>
+                        <p class="affiliation">
+                            Senior Professor and Chair of Human Resources Management<br>
+                            Faculty of Management and Finance<br>
+                            University of Colombo
+                        </p>
+                        <p>Senior academic with extensive experience supervising, mentoring, and examining postgraduate
+                            researchers.</p>
+                    </div>
                 </div>
                 <div class="facilitator">
-                    <h4>Prof. Tharusha Goonerathna</h4>
-                    <p>Experienced academic and researcher with deep insight into research progression, publishing, and
-                        completion challenges.</p>
+                    <img src="../../images/people/Tharusha-Goonerathna.jpeg" alt="Prof. Tharusha Goonerathna"
+                        loading="lazy">
+                    <div>
+                        <h4>Prof. Tharusha Goonerathna</h4>
+                        <p class="affiliation">
+                            Professor and Chair of Accounting<br>
+                            Faculty of Management and Finance<br>
+                            University of Colombo
+                        </p>
+                        <p>Experienced academic and researcher with deep insight into research progression, publishing,
+                            and
+                            completion challenges.</p>
+                    </div>
                 </div>
                 <p style="color:var(--muted); font-style:italic;">Together, they are the authors of <strong>200 Do’s and
                         Don’ts in Research</strong>, a practical guide based on repeated patterns observed among real
