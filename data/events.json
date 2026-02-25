@@ -1,0 +1,209 @@
+[
+    {
+        "image": "events/monetize-your-skills.jpg",
+        "title": "Monetize Your Skills & Work Remotely!",
+        "date": "Wed, 12 Mar 2025",
+        "meta": "Remote Work \u2022 Career advancement",
+        "description": "Learn how to monetize your existing skills globally and secure high-paying remote opportunities.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/level-up-freelancing.jpg",
+        "title": "\ud83d\ude80 Freelancing 2.0: Scale & Earn More! \ud83d\ude80",
+        "date": "Wed, 19 Mar 2025",
+        "meta": "Scale & Earn More \u2022 Career advancement",
+        "description": "Level up your freelancing career with proven strategies for attracting high-value clients, smart pricing, and building sustainable income streams.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            },
+            {
+                "text": "View Recent Classes",
+                "link": "https://www.facebook.com/events/2139943923122448/",
+                "class": "btn secondary",
+                "target": "_blank",
+                "rel": "noopener"
+            }
+        ]
+    },
+    {
+        "image": "events/film-business.jpg",
+        "title": "International Film Business and Creative Strategy Masterclass",
+        "date": "Sat, 29 Mar 2025",
+        "meta": "Film industry insights \u2022 Pitch to experts",
+        "description": "Learn what the global film market demands and master the art of pitching. Get a chance to present to industry professionals and win mentorship opportunities.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            },
+            {
+                "text": "View Recent Classes",
+                "link": "https://www.facebook.com/theory2trade/posts/pfbid02qWYjgHfZCvT9y8WrG7wD4Vgw4VWKvGnv8Faar6wdwxsJ52kNR7kmPR4N7jN6DMoUl",
+                "class": "btn secondary",
+                "target": "_blank",
+                "rel": "noopener"
+            }
+        ]
+    },
+    {
+        "image": "events/ai-unlocked.jpg",
+        "title": "AI Unlocked : Your first step into the future",
+        "date": "Sun, 30 Mar 2025",
+        "meta": "Beginner-friendly \u2022 Industry mentors",
+        "description": "A comprehensive workshop to start your AI journey with guidance from industry experts and hands-on learning experiences.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            },
+            {
+                "text": "View Recent Classes",
+                "link": "https://www.facebook.com/events/2849007348603824/",
+                "class": "btn secondary",
+                "target": "_blank",
+                "rel": "noopener"
+            }
+        ]
+    },
+    {
+        "image": "events/sm-marketing.jpg",
+        "title": "Social Media Marketing",
+        "date": "Thu, 8 May 2025",
+        "meta": "Grow your business online \u2022 Practical strategies",
+        "description": "Master proven social media strategies to build your brand and reach more customers. No fancy tools needed; just the right plan and simple execution.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            },
+            {
+                "text": "View Recent Classes",
+                "link": "https://www.facebook.com/theory2trade/posts/pfbid0eXxpnADRAtU7Vrn96jwMtPA4RWwaTZKk3PCNfNDQUawN7aXs5sWCGfe3xEKbD3Yjl",
+                "class": "btn secondary",
+                "target": "_blank",
+                "rel": "noopener"
+            }
+        ]
+    },
+    {
+        "image": "events/your-career-decoded.jpg",
+        "title": "Navigate the Modern IT Landscape",
+        "date": "Wed, 15 Oct 2025",
+        "meta": "IT Trends \u2022 Career Guidance",
+        "description": "Discover the latest trends in the IT industry and learn how to navigate modern tech career paths with confidence.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/architect-like-a-pro.jpg",
+        "title": "Architect Like a Pro",
+        "date": "Fri, 31 Oct 2025",
+        "meta": "Software Architecture \u2022 Advanced",
+        "description": "Master the core principles of software architecture to design, build, and maintain highly scalable and robust software systems.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/ai-work-week.jpg",
+        "title": "AI Work Week !",
+        "date": "Tue, 11 Nov 2025",
+        "meta": "Virtual Workshops \u2022 40+ Working Hours",
+        "description": "A practical, project-driven week designed to turn your AI curiosity into real experience. Don\u2019t just learn AI. Build with it.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/growth-mindset.jpg",
+        "title": "Growth Mindset and Resilience",
+        "date": "Fri, 12 Dec 2025",
+        "meta": "Undergraduates \u2022 Interactive Session",
+        "description": "Calling all Sri Lankan undergraduates\u2014It's time to prioritize discipline over motivation, believe in progress, and grow through what you go through.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/next-gen-entrepreneurs.jpg",
+        "title": "Empowering the Next Generation of Entrepreneurs",
+        "date": "Mon, 15 Dec 2025",
+        "meta": "Learn. Connect. Grow. \u2022 Speaker: Dr. Chandanamali Punchihewa",
+        "description": "Be inspired by entrepreneurs who started just like you, and discover how you can build your own journey.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/entrepreneurial-path.jpg",
+        "title": "The Entrepreneurial Path",
+        "date": "Wed, 17 Dec 2025",
+        "meta": "Lessons from Experience \u2022 Interactive Session",
+        "description": "A candid conversation on building, leading, and learning through real entrepreneurial journeys.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "title": "Registration not available at the moment",
+                "class": "btn disabled",
+                "isButton": true
+            }
+        ]
+    },
+    {
+        "image": "events/research-excellence/research-excellence-flyer.jpg",
+        "title": "Research Excellence Workshop",
+        "date": "Sat, 7 Mar at 09:30",
+        "meta": "Do\u2019s & Don\u2019ts for Researchers \u2022 Practical guide",
+        "description": "A practical workshop to help students and researchers avoid common mistakes and complete research with confidence.",
+        "buttons": [
+            {
+                "text": "Register Now",
+                "link": "events/research-excellence/",
+                "class": "btn"
+            }
+        ]
+    }
+]

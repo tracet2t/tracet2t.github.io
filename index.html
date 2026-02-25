@@ -314,81 +314,8 @@
         <h2>T2T Events</h2>
         <p class="lead">Interactive workshops designed to equip you with cutting-edge skills for today's competitive job
           market.</p>
-        <div class="grid cols-2">
-          <article class="tile">
-            <img class="cover" src="events/research-excellence/research-excellence-flyer.jpg"
-              alt="Research Excellence Workshop" loading="lazy" />
-            <div class="body">
-              <h3>Research Excellence Workshop</h3>
-              <p class="meta">Do’s & Don’ts for Researchers • Practical guide</p>
-              <p>A practical workshop to help students and researchers avoid common mistakes and complete research with
-                confidence.</p>
-              <div class="row">
-                <a class="btn" href="events/research-excellence/">Register Now</a>
-              </div>
-            </div>
-          </article>
-          <article class="tile">
-            <img class="cover" src="images/ai-unlocked.jpg" alt="AI Unlocked Masterclass" loading="lazy" />
-            <div class="body">
-              <h3>AI Unlocked Masterclass</h3>
-              <p class="meta">Beginner-friendly • Industry mentors</p>
-              <p>A comprehensive workshop to start your AI journey with guidance from industry experts and hands-on
-                learning experiences.</p>
-              <div class="row">
-                <button class="btn disabled" title="Registration not available at the moment">Register Now</button>
-                <a class="btn secondary" href="https://www.facebook.com/events/2849007348603824/" target="_blank"
-                  rel="noopener">View Recent Classes</a>
-              </div>
-            </div>
-          </article>
-          <article class="tile">
-            <img class="cover" src="images/freepik__the-style-is-candid-image-photography-with-natural__40404.jpeg"
-              alt="Freelancing 2.0 Masterclass" loading="lazy" />
-            <div class="body">
-              <h3>Freelancing 2.0 Masterclass</h3>
-              <p class="meta">Scale & Earn More • Career advancement</p>
-              <p>Level up your freelancing career with proven strategies for attracting high-value clients, smart
-                pricing, and building sustainable income streams.</p>
-              <div class="row">
-                <button class="btn disabled" title="Registration not available at the moment">Register Now</button>
-                <a class="btn secondary" href="https://www.facebook.com/events/2139943923122448/" target="_blank"
-                  rel="noopener">View Recent Classes</a>
-              </div>
-            </div>
-          </article>
-          <article class="tile">
-            <img class="cover" src="images/freepik__the-style-is-candid-image-photography-with-natural__39798.jpeg"
-              alt="Social Media Marketing Masterclass" loading="lazy" />
-            <div class="body">
-              <h3>Social Media Marketing Masterclass</h3>
-              <p class="meta">Grow your business online • Practical strategies</p>
-              <p>Master proven social media strategies to build your brand and reach more customers. No fancy tools
-                needed; just the right plan and simple execution.</p>
-              <div class="row">
-                <button class="btn disabled" title="Registration not available at the moment">Register Now</button>
-                <a class="btn secondary"
-                  href="https://www.facebook.com/theory2trade/posts/pfbid0eXxpnADRAtU7Vrn96jwMtPA4RWwaTZKk3PCNfNDQUawN7aXs5sWCGfe3xEKbD3Yjl"
-                  target="_blank" rel="noopener">View Recent Classes</a>
-              </div>
-            </div>
-          </article>
-          <article class="tile">
-            <img class="cover" src="images/freepik__the-style-is-candid-image-photography-with-natural__39801.jpeg"
-              alt="International Film Business Masterclass" loading="lazy" />
-            <div class="body">
-              <h3>International Film Business & Creative Strategy Masterclass</h3>
-              <p class="meta">Film industry insights • Pitch to experts</p>
-              <p>Learn what the global film market demands and master the art of pitching. Get a chance to present to
-                industry professionals and win mentorship opportunities.</p>
-              <div class="row">
-                <button class="btn disabled" title="Registration not available at the moment">Register Now</button>
-                <a class="btn secondary"
-                  href="https://www.facebook.com/theory2trade/posts/pfbid02qWYjgHfZCvT9y8WrG7wD4Vgw4VWKvGnv8Faar6wdwxsJ52kNR7kmPR4N7jN6DMoUl"
-                  target="_blank" rel="noopener">View Recent Classes</a>
-              </div>
-            </div>
-          </article>
+        <div class="grid cols-2" id="events-grid">
+          <!-- Events will be dynamically injected here -->
         </div>
       </div>
     </section>
@@ -575,6 +502,56 @@
     // Track animation progress to update indicators
     animationInterval = setInterval(updateCurrentSlide, 100);
     updateIndicators(); // Initialize indicators
+
+    // Fetch and render events dynamically
+    async function loadEvents() {
+      const eventsGrid = document.getElementById('events-grid');
+      if (!eventsGrid) return;
+      try {
+        const response = await fetch('data/events.json');
+        if (!response.ok) throw new Error('Failed to fetch events');
+        const events = await response.json();
+
+        eventsGrid.innerHTML = ''; // Clear fallback text if any
+
+        events.reverse().forEach(event => {
+          const article = document.createElement('article');
+          article.className = 'tile';
+
+          let buttonsHtml = '';
+          event.buttons.forEach(btn => {
+            if (btn.isButton) {
+              const titleAttr = btn.title ? ` title="${btn.title}"` : '';
+              buttonsHtml += `                <button class="${btn.class}"${titleAttr}>${btn.text}</button>\n`;
+            } else {
+              const targetAttr = btn.target ? ` target="${btn.target}"` : '';
+              const relAttr = btn.rel ? ` rel="${btn.rel}"` : '';
+              buttonsHtml += `                <a class="${btn.class}" href="${btn.link}"${targetAttr}${relAttr}>${btn.text}</a>\n`;
+            }
+          });
+
+          article.innerHTML = `
+            <img class="cover" src="${event.image}" alt="${event.title}" loading="lazy" />
+            <div class="body">
+              <h3>${event.title}</h3>
+              <p class="meta"><strong>📅 ${event.date}</strong><br>${event.meta}</p>
+              <p>${event.description}</p>
+              <div class="row">
+${buttonsHtml}              </div>
+            </div>
+          `;
+          eventsGrid.appendChild(article);
+        });
+
+        // Re-observe newly created elements for scroll animation
+        document.querySelectorAll('#events-grid .tile').forEach(el => observer.observe(el));
+      } catch (error) {
+        console.error('Error loading events:', error);
+      }
+    }
+
+    // Call the function to load events
+    loadEvents();
   </script>
 
   <noscript>This site works without JavaScript. Smooth scrolling requires JavaScript.</noscript>
