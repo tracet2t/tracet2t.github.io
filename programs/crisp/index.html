@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CRISP - Career Readiness and Industry Skills Program</title>
+    <meta name="description"
+        content="CRISP is a structured path to rebuild from the basics and practice the exact skills, tools, and workflows employers expect." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/png" href="../../images/t2t_logo.png" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <meta property="og:title" content="CRISP - Career Readiness and Industry Skills Program" />
+    <meta property="og:description"
+        content="CRISP is a structured path to rebuild from the basics and practice the exact skills, tools, and workflows employers expect." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="crisp-batch-1.jpg" />
+    <style>
+        .crisp-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        .content-block {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-block h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .content-block .lead {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="../../index.html#top" class="brand" aria-label="Home">
+                <img src="../../images/logos/t2t.png" alt="Theory to Trade by TRACE logo" loading="eager" />
+                <strong>
+                    <span class="brand-full">Theory to Trade (T2T) by TRACE</span>
+                    <span class="brand-short">T2T by TRACE</span>
+                </strong>
+            </a>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#programs">Programs</a></li>
+                    <li><a href="../../index.html#who">Who it's for</a></li>
+                    <li><a href="../../index.html#testimonials">Alumni</a></li>
+                    <li><a href="../../index.html#partners">Partners</a></li>
+                    <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button class="menu btn secondary" id="menuBtn" aria-expanded="false"
+                    aria-controls="mobileNav">Menu</button>
+            </div>
+        </div>
+        <div id="mobileNav" class="container hide" role="dialog" aria-modal="false">
+            <nav>
+                <ul style="display:grid; gap:8px; padding:12px 0">
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#programs">Programs</a></li>
+                    <li><a href="../../index.html#who">Who it's for</a></li>
+                    <li><a href="../../index.html#testimonials">Alumni</a></li>
+                    <li><a href="../../index.html#partners">Partners</a></li>
+                    <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="crisp-hero">
+            <div class="container content-block">
+                <h1>CRISP - Career Readiness and Industry Skills Program</h1>
+                <p class="lead" style="text-align: left;">Still searching for a first job or internship? Feeling
+                    unprepared? CRISP is a structured path to
+                    rebuild from the basics and practice the exact skills, tools, and workflows employers expect. Work
+                    on real
+                    projects guided by industry experts and graduate with confidence.</p>
+                <div class="grid cols-2"
+                    style="display:grid; grid-template-columns:1fr 1fr; gap:18px; text-align:left;">
+                    <div class="card">
+                        <h3>CRISP Foundation</h3>
+                        <p>Not sure where to start an IT career? Build confidence, gain essential skills, and be ready
+                            for the next
+                            opportunity.</p>
+                        <div class="spacer"></div>
+                        <div class="row">
+                            <a class="btn" href="../../docs/CRISP-Foundation.pdf" target="_blank" rel="noopener">Show
+                                details</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>CRISP Practitioner</h3>
+                        <p>Completed Foundation? Work on industry projects, collaborate with real clients, and level up
+                            with mentor
+                            guidance.</p>
+                        <div class="spacer"></div>
+                        <div class="row">
+                            <a class="btn" href="../../docs/CRISP-Practitioner.pdf" target="_blank" rel="noopener">Show
+                                details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <small>© <span id="year"></span> Theory to Trade by TRACE</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Logic
+        const btn = document.getElementById('menuBtn');
+        const mobile = document.getElementById('mobileNav');
+        if (btn) btn.addEventListener('click', () => {
+            const open = mobile.classList.toggle('hide');
+            btn.setAttribute('aria-expanded', String(!open));
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

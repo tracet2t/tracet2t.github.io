@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IFAP - International Filmmaker Accelerator Program</title>
+    <meta name="description"
+        content="Launchpad for Sri Lankan filmmakers. Take your films global with workshops, mentorship, development labs, and live pitch forums." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/png" href="../../images/t2t_logo.png" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <meta property="og:title" content="IFAP - International Filmmaker Accelerator Program" />
+    <meta property="og:description" content="Launchpad for Sri Lankan filmmakers. Take your films global." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="ifap-coming-soon.png" />
+    <style>
+        .ifap-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        .content-block {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-block h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .content-block .lead {
+            color: var(--brand);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .content-block p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .flyer-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            margin: 0 auto 30px auto;
+            display: block;
+        }
+
+        .contact-info {
+            background: var(--card);
+            border: 1px solid #1f2937;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 30px;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="../../index.html#top" class="brand" aria-label="Home">
+                <img src="../../images/logos/t2t.png" alt="Theory to Trade by TRACE logo" loading="eager" />
+                <strong>
+                    <span class="brand-full">Theory to Trade (T2T) by TRACE</span>
+                    <span class="brand-short">T2T by TRACE</span>
+                </strong>
+            </a>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#programs">Programs</a></li>
+                    <li><a href="../../index.html#who">Who it's for</a></li>
+                    <li><a href="../../index.html#testimonials">Alumni</a></li>
+                    <li><a href="../../index.html#partners">Partners</a></li>
+                    <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button class="menu btn secondary" id="menuBtn" aria-expanded="false"
+                    aria-controls="mobileNav">Menu</button>
+            </div>
+        </div>
+        <div id="mobileNav" class="container hide" role="dialog" aria-modal="false">
+            <nav>
+                <ul style="display:grid; gap:8px; padding:12px 0">
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#programs">Programs</a></li>
+                    <li><a href="../../index.html#who">Who it's for</a></li>
+                    <li><a href="../../index.html#testimonials">Alumni</a></li>
+                    <li><a href="../../index.html#partners">Partners</a></li>
+                    <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ifap-hero">
+            <div class="container content-block">
+                <h1>International Filmmaker Accelerator Program</h1>
+                <p class="lead">Launchpad for Sri Lankan Filmmakers</p>
+                <p>Have you ever wanted to take your films global instead of limiting them to the domestic market, but
+                    never really knew where to start?</p>
+
+                <img src="/programs/ifap/ifap-coming-soon.png" alt="IFAP Program flyer: Coming Soon" class="flyer-img"
+                    loading="lazy">
+
+                <div class="contact-info">
+                    <h3 style="margin-top:0">More Information Coming Soon</h3>
+                    <p style="margin-bottom:0">Workshops • Mentorship • Development Labs • Live Pitch Forum</p>
+                    <p
+                        style="color:var(--brand); font-weight:bold; font-size:1.2rem; margin-top:10px; margin-bottom:0;">
+                        Hotline: 0777 643 129</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <small>© <span id="year"></span> Theory to Trade by TRACE</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Logic
+        const btn = document.getElementById('menuBtn');
+        const mobile = document.getElementById('mobileNav');
+        if (btn) btn.addEventListener('click', () => {
+            const open = mobile.classList.toggle('hide');
+            btn.setAttribute('aria-expanded', String(!open));
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
