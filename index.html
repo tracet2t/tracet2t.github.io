@@ -14,6 +14,16 @@
   <meta property="og:description" content="Employable is good. Irreplaceable is better. That’s the gap we close." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/T2T-Website.png" />
+  <style>
+    /* Responsive Grid Adjustments for Tablet/Mobile */
+    @media (max-width: 768px) {
+
+      .grid.cols-2,
+      .quotes {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -235,7 +245,7 @@
         <p class="lead">Still searching for a first job or internship? Feeling unprepared? CRISP is a structured path to
           rebuild from the basics and practice the exact skills, tools, and workflows employers expect. Work on real
           projects guided by industry experts and graduate with confidence.</p>
-        <div class="grid cols-2" style="display:grid; grid-template-columns:1fr 1fr; gap:18px">
+        <div class="grid cols-2" style="text-align: left;">
           <div class="card">
             <h3>CRISP Foundation</h3>
             <p>Not sure where to start an IT career? Build confidence, gain essential skills, and be ready for the next

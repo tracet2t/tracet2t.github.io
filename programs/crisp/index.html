@@ -39,6 +39,16 @@
             line-height: 1.6;
             margin-bottom: 2rem;
         }
+
+        /* Responsive Grid Adjustments */
+        @media (max-width: 768px) {
+
+            .grid.cols-2,
+            .batch-grid,
+            .quotes {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 
@@ -125,8 +135,7 @@
                     unprepared? CRISP is a structured path to rebuild from the basics and practice the exact skills,
                     tools, and workflows employers expect. Work
                     on real projects guided by industry experts and graduate with confidence.</p>
-                <div class="grid cols-2"
-                    style="display:grid; grid-template-columns:1fr 1fr; gap:18px; text-align:left;">
+                <div class="grid cols-2" style="text-align:left;">
                     <div class="card">
                         <h3>CRISP Foundation</h3>
                         <p>Not sure where to start an IT career? Build confidence, gain essential skills, and be ready
@@ -156,7 +165,7 @@
         <section class="crisp-batches" style="padding-bottom: 60px;">
             <div class="container content-block">
                 <h2 style="font-size: 2rem; margin-bottom: 2rem;">T2T CRISP Batches</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left;">
+                <div class="batch-grid" style="text-align: left;">
 
                     <a href="/programs/crisp/batch/1/index.html"
                         style="text-decoration: none; color: inherit; display: block;">
@@ -206,7 +215,7 @@
             <div class="container content-block">
                 <h2 style="font-size: 2rem; margin-bottom: 2rem;">Trained with us. Hired by the best.</h2>
                 <p class="lead">See how alumni turned potential into paychecks.</p>
-                <div class="quotes" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <div class="quotes">
                     <div class="quote card" style="text-align: left;">
                         <blockquote style="margin-bottom: 1rem; font-style: italic;">"During the middle of my academic
                             journey, I discovered the T2T program. I applied with
