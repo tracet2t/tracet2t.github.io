@@ -13,7 +13,7 @@
     <meta property="og:title" content="IFAP - International Filmmaker Accelerator Program" />
     <meta property="og:description" content="Launchpad for Sri Lankan filmmakers. Take your films global." />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="ifap-coming-soon.png" />
+    <meta property="og:image" content="ifap.jpg" />
     <style>
         .ifap-hero {
             padding-top: 120px;
@@ -21,47 +21,96 @@
         }
 
         .content-block {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .text-center {
             text-align: center;
         }
 
-        .content-block h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        .content-block .lead {
-            color: var(--brand);
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .content-block p {
-            color: var(--muted);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
+        .text-justify {
+            text-align: justify;
         }
 
         .flyer-img {
             max-width: 100%;
             height: auto;
             border-radius: var(--radius);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            margin: 0 auto 30px auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin: 2rem auto;
             display: block;
         }
 
-        .contact-info {
-            background: var(--card);
-            border: 1px solid #1f2937;
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-top: 30px;
-            display: inline-block;
+        .mentor-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mentor-card h3 {
+            color: var(--brand);
+            margin-bottom: 0.5rem;
+        }
+
+        .mentor-card .role {
+            font-weight: 600;
+            color: var(--brand-2);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .requirement-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirement-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+        }
+
+        .requirement-list li::before {
+            content: "•";
+            color: var(--brand);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .fee-card {
+            background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+            border: 2px solid var(--brand);
+            padding: 2.5rem;
             text-align: center;
+        }
+
+        .fee-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text);
+            margin: 1rem 0;
+        }
+
+        .fee-subtitle {
+            color: var(--brand);
+            font-weight: 600;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: radial-gradient(circle at center, #1e293b 0%, #0b1022 100%);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+
+            .grid.cols-2,
+            .grid.cols-3 {
+                grid-template-columns: 1fr !important;
+            }
         }
     </style>
 </head>
@@ -106,7 +155,7 @@
                         aria-label="Instagram">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                     <a href="https://youtube.com/@tracet2t" target="_blank" rel="noopener" aria-label="YouTube">
@@ -141,23 +190,175 @@
     </header>
 
     <main>
+        <!-- HERO / OVERVIEW -->
         <section class="ifap-hero">
-            <div class="container content-block">
-                <h1>International Filmmaker Accelerator Program</h1>
-                <p class="lead">Launchpad for Sri Lankan Filmmakers</p>
-                <p>Have you ever wanted to take your films global instead of limiting them to the domestic market, but
-                    never really knew where to start?</p>
+            <div class="container content-block text-center">
+                <h1 style="color: var(--brand);">INTERNATIONAL FILMMAKER ACCELERATOR PROGRAM</h1>
+                <p class="lead" style="font-size: 1.3rem; margin-top: 1rem;">Launchpad for Global Storytellers</p>
 
-                <img src="/programs/ifap/ifap-coming-soon.png" alt="IFAP Program flyer: Coming Soon" class="flyer-img"
-                    loading="lazy">
+                <img src="/programs/ifap/ifap.jpg" alt="IFAP Program Backdrop" class="flyer-img" loading="lazy">
 
-                <div class="contact-info">
-                    <h3 style="margin-top:0">More Information Coming Soon</h3>
-                    <p style="margin-bottom:0">Workshops • Mentorship • Development Labs • Live Pitch Forum</p>
-                    <p
-                        style="color:var(--brand); font-weight:bold; font-size:1.2rem; margin-top:10px; margin-bottom:0;">
-                        Hotline: 0777 643 129</p>
+                <div class="card" style="margin-top: 2rem; text-align: left;">
+                    <h2 style="margin-bottom: 1.5rem;">Overview</h2>
+                    <p style="margin-bottom: 1rem;">One of the biggest gaps in the Sri Lankan film education landscape
+                        is that many filmmakers are not equipped to position their projects in front of financiers,
+                        studios, and international markets. Festival strategy, global packaging, and market alignment
+                        remain largely underserved.</p>
+                    <p style="margin-bottom: 1rem;">The <strong>International Filmmaker Accelerator</strong> is designed
+                        for filmmakers who want to operate beyond the local ecosystem and build projects with genuine
+                        global potential.</p>
+                    <p>Each participant develops a single feature film or high-end series project, progressing from
+                        concept refinement to a market-ready package. By the end of the program, every filmmaker leaves
+                        with a professionally assembled development dossier suitable for submission to international
+                        labs, festivals, sales agents, and financiers.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- STRUCTURE & FOR WHOM -->
+        <section class="program-details" style="background: rgba(15, 23, 42, 0.5);">
+            <div class="container content-block">
+                <div class="grid cols-2">
+                    <div class="card">
+                        <h2 style="margin-bottom: 1.5rem;">Program Structure</h2>
+                        <ul class="requirement-list">
+                            <li><strong>Duration:</strong> 16 Weeks</li>
+                            <li><strong>Total Contact Hours:</strong> 100 Hours</li>
+                        </ul>
+                        <h3 style="margin: 1.5rem 0 1rem; font-size: 1.1rem; color: var(--brand-2);">Format:</h3>
+                        <ul class="requirement-list">
+                            <li>Workshops</li>
+                            <li>Development Labs</li>
+                            <li>Structured Mentorship</li>
+                            <li>Industry Simulations</li>
+                            <li>Live Pitch Forum</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h2 style="margin-bottom: 1.5rem;">Who This Is For</h2>
+                        <ul class="requirement-list">
+                            <li>Film industry professionals</li>
+                            <li>Emerging and aspiring filmmakers</li>
+                            <li>Writers, directors, and producers seeking international pathways</li>
+                            <li>Creators developing feature films or high-end series</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCE PANEL -->
+        <section class="resource-panel">
+            <div class="container content-block">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Program Leads & Mentors</h2>
+                <div class="grid cols-3">
+                    <!-- Harindu -->
+                    <div class="card mentor-card">
+                        <h3>Harindu Gunawardena</h3>
+                        <div class="role">Programme Director</div>
+                        <p style="font-size: 0.95rem;">Harindu is an international producer with an MA in Producing for
+                            Film and Television from Royal Holloway, University of London. He trained under the founding
+                            Head of BBC Films and a BBC Drama Commissioner, alongside Oscar and BAFTA listed filmmakers.
+                        </p>
+                        <p style="font-size: 0.95rem; margin-top: 1rem;">He is the founder of Rogue Element Limited,
+                            operating across the UK, US, and South Asia. His expertise includes market positioning,
+                            sales strategy, distribution pathways, and finance structuring.</p>
+                    </div>
+                    <!-- Rajeev -->
+                    <div class="card mentor-card">
+                        <h3>Rajeev Colton</h3>
+                        <div class="role">Filmmaker & Producer</div>
+                        <p style="font-size: 0.95rem;">Rajeev is a filmmaker and founder of Malla Productions with an
+                            MFA in Producing for Film and Television from Chapman University. He collaborated with
+                            Marvel Studios and Proximity Media, working alongside filmmakers such as Ryan Coogler and
+                            Asghar Farhadi.</p>
+                        <p style="font-size: 0.95rem; margin-top: 1rem;">His work focuses on elevating Sri Lankan cinema
+                            through authentic South Asian storytelling. He specializes in screenwriting, film
+                            aesthetics, and production planning.</p>
+                    </div>
+                    <!-- Akash -->
+                    <div class="card mentor-card">
+                        <h3>Akash Sunethkumara</h3>
+                        <div class="role">Filmmaker & Director</div>
+                        <p style="font-size: 0.95rem;">Akash is an award-winning Sri Lankan filmmaker and actor trained
+                            at Raindance Academy. His work has screened at more than 30 international festivals, and he
+                            is the only Sri Lankan filmmaker featured at San Diego Comic-Con three times.</p>
+                        <p style="font-size: 0.95rem; margin-top: 1rem;">He founded High School Junkies and Junkyard
+                            Theory. His focus is genre filmmaking, with strengths in visual storytelling, storyboarding,
+                            and directing craft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REQUIREMENTS -->
+        <section class="requirements" style="background: rgba(15, 23, 42, 0.5);">
+            <div class="container content-block">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Application Requirements</h2>
+                <div class="grid cols-3">
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">1. Curriculum Vitae (CV)</h3>
+                        <p>A detailed professional resume highlighting your experience in film or related creative
+                            fields.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">2. Cover Letter</h3>
+                        <p style="margin-bottom: 0.5rem;">A personal statement explaining:</p>
+                        <ul class="requirement-list">
+                            <li>Motivation for the program</li>
+                            <li>Why you are a strong fit</li>
+                            <li>What you aim to achieve</li>
+                            <li>Long-term professional ambitions</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">3. Project Submission</h3>
+                        <p style="margin-bottom: 0.5rem;">A project you intend to develop during the program:</p>
+                        <ul class="requirement-list">
+                            <li><strong>Logline:</strong> Concise summary</li>
+                            <li><strong>Synopsis:</strong> 1-2 pages (Structure, Character, Theme)</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);">Feature films and high-end
+                            series concepts only.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEES -->
+        <section class="fees">
+            <div class="container content-block">
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <div class="card fee-card">
+                        <h2>Program Investment</h2>
+                        <div class="fee-amount">LKR 150,000</div>
+                        <div class="fee-subtitle">Program Fee</div>
+                        <p style="margin: 1.5rem 0; color: var(--muted);">+ LKR 2,000 Registration Fee</p>
+                        <p style="font-weight: 600; color: var(--text);">Installment plans available.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 style="margin-bottom: 2rem;">Ready to take your film global?</h2>
+                <div class="row" style="justify-content: center; gap: 1.5rem;">
+                    <a href="https://forms.gle/CFRTJTGr4M343xTF7" class="btn" target="_blank" rel="noopener">Apply
+                        Now</a>
+                    <a href="/programs/ifap/ifap-student-brochure.pdf" class="btn secondary" target="_blank"
+                        rel="noopener" download>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Brochure
+                    </a>
+                </div>
+                <p style="margin-top: 2rem; color: var(--muted);">Hotline: 0777 643 129</p>
             </div>
         </section>
     </main>
