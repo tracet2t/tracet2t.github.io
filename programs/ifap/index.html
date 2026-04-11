@@ -437,7 +437,7 @@
         <!-- GALLERY CAROUSEL -->
         <section class="gallery-carousel">
             <div class="container content-block">
-                <h2 class="text-center" style="margin-bottom: 3rem;">Program Leads & Mentors a</h2>
+                <h2 class="text-center" style="margin-bottom: 3rem;">Program Leads & Mentors</h2>
                 <div class="carousel-container">
                     <div class="carousel-track">
                         <img src="/programs/ifap/carousal/1.png" alt="IFAP Highlight 1" class="carousel-slide current">
@@ -591,33 +591,42 @@
             const nextButton = document.querySelector('.next-btn');
             const prevButton = document.querySelector('.prev-btn');
             const dotsNav = document.querySelector('.carousel-nav');
-            const dots = Array.from(dotsNav.children);
+            const dots = dotsNav ? Array.from(dotsNav.children) : [];
             const slides = Array.from(track.children);
             let currentIndex = 0;
 
             const moveToSlide = (index) => {
                 track.style.transform = `translateX(-${index * 100}%)`;
-                dotsNav.querySelector('.current').classList.remove('current');
-                dots[index].classList.add('current');
+                if (dotsNav) {
+                    const currentDot = dotsNav.querySelector('.current');
+                    if (currentDot) currentDot.classList.remove('current');
+                    if (dots[index]) dots[index].classList.add('current');
+                }
                 currentIndex = index;
             };
 
-            nextButton.addEventListener('click', () => {
-                const targetIndex = (currentIndex + 1) % slides.length;
-                moveToSlide(targetIndex);
-            });
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    const targetIndex = (currentIndex + 1) % slides.length;
+                    moveToSlide(targetIndex);
+                });
+            }
 
-            prevButton.addEventListener('click', () => {
-                const targetIndex = (currentIndex - 1 + slides.length) % slides.length;
-                moveToSlide(targetIndex);
-            });
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    const targetIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    moveToSlide(targetIndex);
+                });
+            }
 
-            dotsNav.addEventListener('click', e => {
-                const targetDot = e.target.closest('button');
-                if (!targetDot) return;
-                const targetIndex = dots.findIndex(dot => dot === targetDot);
-                moveToSlide(targetIndex);
-            });
+            if (dotsNav) {
+                dotsNav.addEventListener('click', e => {
+                    const targetDot = e.target.closest('button');
+                    if (!targetDot) return;
+                    const targetIndex = dots.findIndex(dot => dot === targetDot);
+                    if (targetIndex !== -1) moveToSlide(targetIndex);
+                });
+            }
         }
     </script>
 </body>
