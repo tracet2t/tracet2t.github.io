@@ -9,8 +9,8 @@
 const CONFIG = {
   // If set to true, CTA clicks redirect to the external form URL below.
   // If set to false, CTA clicks open the custom built-in application modal.
-  useExternalForm: false,
-  externalFormUrl: "https://forms.gle/PLACEHOLDER_LEAD_X_FORM",
+  useExternalForm: true,
+  externalFormUrl: "https://forms.gle/xPPyZCp4LB5qKd237",
   
   // Default submission endpoint (if you hook up a backend form processor later)
   submitEndpoint: "#"
