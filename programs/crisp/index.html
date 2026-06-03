@@ -255,29 +255,61 @@
 
         .b4-build-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .b4-build-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .b4-build-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
 
         .b4-build-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid #1e293b;
-            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.3) 100%);
+            border: 1px solid #1e3a8a;
+            padding: 2rem 1.75rem;
             border-radius: 12px;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             gap: 1rem;
+            height: 100%;
+            transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            word-break: normal;
+            overflow-wrap: normal;
+        }
+
+        .b4-build-card:hover {
+            border-color: rgba(0, 71, 255, 0.5);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.5) 100%);
+            box-shadow: 0 0 24px rgba(0, 71, 255, 0.15), inset 0 0 1px rgba(0, 71, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .b4-build-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 8px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(0, 71, 255, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1.5px solid rgba(0, 71, 255, 0.3);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #60a5fa;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
             flex-shrink: 0;
         }
 
@@ -619,40 +651,48 @@
         <!-- 7. What You Will Build -->
         <section>
             <div class="container">
-                <h2 class="section-title" style="margin-bottom: 1rem;">What You Walk Away With</h2>
-                <p class="section-subtitle" style="color: #cbd5e1; max-width: 900px; margin: 0 auto 2rem;">T2T helps you turn learning into visible career evidence — the kind employers can see, question, and trust.</p>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 0.5rem; font-size: clamp(1.8rem, 5vw, 2.5rem);">What You Walk Away With</h2>
+                <p class="section-subtitle" style="color: #cbd5e1; max-width: 800px; margin: 0 auto 3rem; text-align: center; font-size: 1.05rem; line-height: 1.6;">T2T helps you turn learning into visible career evidence — the kind employers can see, question, and trust.</p>
                 <div class="b4-build-grid">
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">A stronger career story</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">A CV and LinkedIn profile shaped by real work, not empty claims.</div>
+                        <div class="b4-build-icon">1</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">A stronger career story</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">A CV and LinkedIn profile shaped by real work, not empty claims.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Confidence to speak about your work</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Practice explaining ideas, decisions, failures, and outcomes clearly.</div>
+                        <div class="b4-build-icon">2</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Confidence to speak about your work</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Practice explaining ideas, decisions, failures, and outcomes clearly.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Real project experience</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Understand how industry projects move from problem to delivery.</div>
+                        <div class="b4-build-icon">3</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Real project experience</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Understand how industry projects move from problem to delivery.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Portfolio evidence</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Showcase actual work, artefacts, demos, and project contributions.</div>
+                        <div class="b4-build-icon">4</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Portfolio evidence</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Showcase actual work, artefacts, demos, and project contributions.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Mentor-backed growth</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Receive feedback from people who understand industry expectations.</div>
+                        <div class="b4-build-icon">5</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Mentor-backed growth</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Receive feedback from people who understand industry expectations.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Industry mindset</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Learn how professionals think about value, deadlines, quality, and accountability.</div>
+                        <div class="b4-build-icon">6</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Industry mindset</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Learn how professionals think about value, deadlines, quality, and accountability.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Interview readiness</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Walk into interviews with examples, stories, and proof of capability.</div>
+                        <div class="b4-build-icon">7</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Interview readiness</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Walk into interviews with examples, stories, and proof of capability.</div>
                     </div>
                     <div class="b4-build-card">
-                        <div style="font-weight: 700; color: #f8fafc;">Exposure to real tools and workflows</div>
-                        <div class="b4-build-desc" style="color: #cbd5e1; margin-top: 0.5rem;">Experience the habits, tools, communication, and pace of real teams.</div>
+                        <div class="b4-build-icon">8</div>
+                        <div style="font-weight: 700; color: #f8fafc; font-size: 1rem; line-height: 1.4;">Exposure to real tools and workflows</div>
+                        <div class="b4-build-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5;">Experience the habits, tools, communication, and pace of real teams.</div>
                     </div>
                 </div>
             </div>
