@@ -384,6 +384,13 @@
                 transform: rotate(90deg);
             }
         }
+        /* FAQ accordion styles */
+        .faq-grid .faq-item { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .faq-q { cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+        .faq-q::after { content: '+'; margin-left: 1rem; font-weight: 700; transition: transform .18s ease; }
+        .faq-item.open .faq-q::after { content: '−'; }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height .28s ease, opacity .2s ease; opacity: 0; }
+        .faq-item.open .faq-a { opacity: 1; }
     </style>
 </head>
 
@@ -843,6 +850,41 @@
                 }
             });
         });
+
+        // FAQ Accordion: collapse by default, toggle on click/keyboard
+        (function initFaqAccordion(){
+            const items = document.querySelectorAll('.faq-grid .faq-item');
+            if (!items.length) return;
+            items.forEach(item => {
+                const q = item.querySelector('.faq-q');
+                const a = item.querySelector('.faq-a');
+                if (!q || !a) return;
+                // accessibility
+                q.setAttribute('role', 'button');
+                q.setAttribute('tabindex', '0');
+                q.setAttribute('aria-expanded', 'false');
+                a.setAttribute('aria-hidden', 'true');
+
+                // ensure collapsed height
+                a.style.maxHeight = null;
+
+                const toggle = () => {
+                    const open = item.classList.toggle('open');
+                    q.setAttribute('aria-expanded', String(open));
+                    a.setAttribute('aria-hidden', String(!open));
+                    if (open) {
+                        a.style.maxHeight = a.scrollHeight + 'px';
+                    } else {
+                        a.style.maxHeight = null;
+                    }
+                };
+
+                q.addEventListener('click', toggle);
+                q.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+                });
+            });
+        })();
     </script>
 </body>
 
