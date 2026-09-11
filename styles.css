@@ -362,6 +362,9 @@ section h2 {
 }
 
 .tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: linear-gradient(180deg, #0c1224, #0a0f1e);
   border: 1px solid #18213c;
   border-radius: clamp(12px, 3vw, 16px);
@@ -374,13 +377,22 @@ section h2 {
 }
 
 .tile .cover {
+  width: 100%;
   aspect-ratio: 16/9;
-  object-fit: contain;
+  object-fit: cover;
   background-color: var(--surface)
 }
 
 .tile .body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: clamp(12px, 3vw, 14px) clamp(12px, 3vw, 14px) clamp(16px, 4vw, 18px)
+}
+
+.tile .body .row {
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .tile h3 {
