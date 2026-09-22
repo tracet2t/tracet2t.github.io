@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corporate Programs | Theory to Trade by TRACE</title>
+  <meta name="description"
+    content="Empower your workforce with tailored training programs. Upskill your employees in AI, modern software engineering, and leadership with T2T." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/png" href="../images/t2t_logo.png" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta property="og:title" content="Corporate Programs | Theory to Trade by TRACE" />
+  <meta property="og:description" content="Customized learning paths, workshops, and coaching designed to upskill your employees." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/T2T-Website.png" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="../index.html" class="brand" aria-label="Home">
+        <img src="../images/logos/t2t.png" alt="Theory to Trade by TRACE logo" loading="eager" />
+        <strong>
+          <span class="brand-full">Theory to Trade (T2T) by TRACE</span>
+          <span class="brand-short">T2T by TRACE</span>
+        </strong>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#programs">Programs</a></li>
+          <li><a class="active" href="index.html">Corporate</a></li>
+          <li><a href="../index.html#events">Events</a></li>
+          <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="menu btn secondary" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="container hide" role="dialog" aria-modal="false">
+      <nav>
+        <ul style="display:grid; gap:8px; padding:12px 0">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#programs">Programs</a></li>
+          <li><a href="index.html">Corporate</a></li>
+          <li><a href="../index.html#events">Events</a></li>
+          <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Corporate Hero" style="padding-top: 120px;">
+      <div class="bg"></div>
+      <div class="container hero-wrap" style="grid-template-columns: 1fr;">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <span class="badge">T2T Corporate Programs</span>
+          <h1>Empower Your Workforce</h1>
+          <p style="margin-inline: auto;">Customized learning paths, hands-on workshops, and coaching designed to upskill your employees in AI, modern software engineering, and leadership.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SHELL -->
+    <section aria-label="Corporate Offerings">
+      <div class="container">
+        <div class="card" style="min-height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <h2 style="color: var(--muted); font-weight: 500;">More details coming soon</h2>
+          <p>We are currently finalizing our corporate program structures. Check back later for updates!</p>
+          <a class="btn" href="../index.html" style="margin-top: 24px;">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <small>© <span id="year"></span> Theory to Trade by TRACE | <a href="../privacy_policy/index.html"
+            style="text-decoration: underline; opacity: 0.8; transition: opacity 0.2s;">Privacy Policy</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileNav');
+    if (btn) btn.addEventListener('click', () => {
+      const open = mobile.classList.toggle('hide');
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
