@@ -289,7 +289,7 @@
         <h2>T2T Events</h2>
         <p class="lead">Interactive workshops designed to equip you with cutting-edge skills for today's competitive job
           market.</p>
-        <div class="grid cols-2" id="events-grid">
+        <div class="events-carousel" id="events-grid">
           <!-- Events will be dynamically injected here -->
         </div>
       </div>
@@ -506,6 +506,33 @@ ${buttonsHtml}              </div>
 
         // Re-observe newly created elements for scroll animation
         document.querySelectorAll('#events-grid .tile').forEach(el => observer.observe(el));
+
+        // Setup auto-ticking carousel for events
+        const eventsCarousel = document.getElementById('events-grid');
+        let isEventsHovered = false;
+        
+        eventsCarousel.addEventListener('mouseenter', () => isEventsHovered = true);
+        eventsCarousel.addEventListener('mouseleave', () => isEventsHovered = false);
+        eventsCarousel.addEventListener('touchstart', () => isEventsHovered = true);
+        eventsCarousel.addEventListener('touchend', () => { setTimeout(() => isEventsHovered = false, 2000); });
+        
+        setInterval(() => {
+          if (isEventsHovered || document.hidden) return; // Don't tick if hovered or tab is hidden
+          
+          const maxScroll = eventsCarousel.scrollWidth - eventsCarousel.clientWidth;
+          if (eventsCarousel.scrollLeft >= maxScroll - 10) {
+            eventsCarousel.scrollBy({ left: -maxScroll, behavior: 'smooth' }); // Scroll back to start
+          } else {
+            // Scroll by one tile width + gap
+            const tile = eventsCarousel.querySelector('.tile');
+            if (tile) {
+              const gap = parseFloat(window.getComputedStyle(eventsCarousel).gap) || 20;
+              const scrollAmount = tile.offsetWidth + gap;
+              eventsCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+          }
+        }, 5000); // Tick every 5 seconds
+
       } catch (error) {
         console.error('Error loading events:', error);
       }

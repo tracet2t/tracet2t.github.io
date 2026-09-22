@@ -628,6 +628,36 @@ section h2 {
   }
 }
 
+/* Events Carousel */
+.events-carousel {
+  display: flex;
+  gap: clamp(16px, 3vw, 24px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  /* Add some padding to not cut off shadows */
+  padding: 10px 10px 20px 10px;
+  margin: -10px -10px 0 -10px;
+}
+
+.events-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.events-carousel > .tile {
+  flex: 0 0 clamp(300px, 45vw, 450px);
+  scroll-snap-align: start;
+}
+
+/* On mobile, events should take up more screen width */
+@media (max-width: 768px) {
+  .events-carousel > .tile {
+    flex: 0 0 clamp(280px, 85vw, 400px);
+  }
+}
+
 /* Footer */
 footer {
   padding: clamp(20px, 4vw, 26px) 0;
