@@ -29,8 +29,13 @@
       <nav aria-label="Primary">
         <ul>
           <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#programs">Programs</a></li>
-          <li><a class="active" href="index.html">Corporate</a></li>
+          <li class="dropdown">
+            <a href="../index.html#programs" aria-haspopup="true">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg></a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html#programs">Community Programs</a></li>
+              <li><a class="active" href="index.html">Corporate Programs</a></li>
+            </ul>
+          </li>
           <li><a href="../index.html#events">Events</a></li>
           <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
         </ul>
@@ -43,8 +48,9 @@
       <nav>
         <ul style="display:grid; gap:8px; padding:12px 0">
           <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#programs">Programs</a></li>
-          <li><a href="index.html">Corporate</a></li>
+          <li><span style="display: block; padding: clamp(.7rem, 3vw, .8rem) 0; color: var(--muted); font-size: clamp(15px, 3vw, 16px); text-align: center; font-weight: 600;">Programs</span></li>
+          <li><a href="../index.html#programs">Community Programs</a></li>
+          <li><a class="active" href="index.html">Corporate Programs</a></li>
           <li><a href="../index.html#events">Events</a></li>
           <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
         </ul>
