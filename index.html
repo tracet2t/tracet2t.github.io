@@ -286,9 +286,20 @@
     <!-- Events -->
     <section id="events" aria-label="Events">
       <div class="container">
-        <h2>T2T Events</h2>
-        <p class="lead">Interactive workshops designed to equip you with cutting-edge skills for today's competitive job
-          market.</p>
+        <div class="row" style="justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+          <div style="flex: 1;">
+            <h2>T2T Events</h2>
+            <p class="lead" style="margin-bottom: 0;">Interactive workshops designed to equip you with cutting-edge skills for today's competitive job market.</p>
+          </div>
+          <div class="row" style="gap: 12px; margin-bottom: 12px;">
+            <button class="carousel-nav-btn" id="events-prev" aria-label="Previous event">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-nav-btn" id="events-next" aria-label="Next event">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
         <div class="events-carousel" id="events-grid">
           <!-- Events will be dynamically injected here -->
         </div>
@@ -507,31 +518,30 @@ ${buttonsHtml}              </div>
         // Re-observe newly created elements for scroll animation
         document.querySelectorAll('#events-grid .tile').forEach(el => observer.observe(el));
 
-        // Setup auto-ticking carousel for events
+        // Setup manual carousel navigation for events
         const eventsCarousel = document.getElementById('events-grid');
-        let isEventsHovered = false;
+        const prevBtn = document.getElementById('events-prev');
+        const nextBtn = document.getElementById('events-next');
         
-        eventsCarousel.addEventListener('mouseenter', () => isEventsHovered = true);
-        eventsCarousel.addEventListener('mouseleave', () => isEventsHovered = false);
-        eventsCarousel.addEventListener('touchstart', () => isEventsHovered = true);
-        eventsCarousel.addEventListener('touchend', () => { setTimeout(() => isEventsHovered = false, 2000); });
-        
-        setInterval(() => {
-          if (isEventsHovered || document.hidden) return; // Don't tick if hovered or tab is hidden
+        if (prevBtn && nextBtn && eventsCarousel) {
+          prevBtn.addEventListener('click', () => {
+            const tile = eventsCarousel.querySelector('.tile');
+            if (tile) {
+              const gap = parseFloat(window.getComputedStyle(eventsCarousel).gap) || 20;
+              const scrollAmount = tile.offsetWidth + gap;
+              eventsCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+          });
           
-          const maxScroll = eventsCarousel.scrollWidth - eventsCarousel.clientWidth;
-          if (eventsCarousel.scrollLeft >= maxScroll - 10) {
-            eventsCarousel.scrollBy({ left: -maxScroll, behavior: 'smooth' }); // Scroll back to start
-          } else {
-            // Scroll by one tile width + gap
+          nextBtn.addEventListener('click', () => {
             const tile = eventsCarousel.querySelector('.tile');
             if (tile) {
               const gap = parseFloat(window.getComputedStyle(eventsCarousel).gap) || 20;
               const scrollAmount = tile.offsetWidth + gap;
               eventsCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
-          }
-        }, 5000); // Tick every 5 seconds
+          });
+        }
 
       } catch (error) {
         console.error('Error loading events:', error);
