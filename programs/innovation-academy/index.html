@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T2T Innovation Academy | Theory to Trade by TRACE</title>
+  <meta name="description"
+    content="Accelerate your ideas from theory to market. T2T Innovation Academy equips builders, technologists, and entrepreneurs to design, prototype, and commercialize breakthrough solutions." />
+  <meta name="theme-color" content="#0b1022" />
+  <link rel="icon" type="image/png" href="../../images/logos/t2t.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="../../styles.css" />
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="T2T Innovation Academy | Theory to Trade by TRACE" />
+  <meta property="og:description"
+    content="Turn breakthrough concepts into market-ready realities. Hands-on incubation, deep tech prototyping, and venture packaging at TRACE Expert City." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../../images/T2T-Website.png" />
+
+  <style>
+    /* Innovation Academy Custom Theme Extensions */
+    :root {
+      --ia-primary: #06b6d4;
+      --ia-primary-glow: rgba(6, 182, 212, 0.25);
+      --ia-secondary: #8b5cf6;
+      --ia-accent: #10b981;
+      --ia-gold: #f59e0b;
+      --ia-bg-dark: #070c1a;
+      --ia-card-bg: rgba(17, 24, 39, 0.7);
+      --ia-card-border: rgba(255, 255, 255, 0.08);
+      --ia-card-hover: rgba(6, 182, 212, 0.25);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--ia-bg-dark);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand strong {
+      font-family: 'Outfit', 'Inter', sans-serif;
+    }
+
+    /* Ambient Glow Backgrounds */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .ambient-glow-1 {
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 70%);
+      filter: blur(60px);
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 40%;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 65%);
+      filter: blur(80px);
+    }
+
+    .ambient-glow-3 {
+      position: absolute;
+      bottom: 10%;
+      left: -200px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      filter: blur(80px);
+    }
+
+    /* HERO SECTION */
+    .ia-hero {
+      padding: clamp(100px, 14vw, 150px) 0 clamp(60px, 8vw, 90px);
+      position: relative;
+      text-align: center;
+    }
+
+    .badge-pill-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .badge-pill-group .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ia-primary);
+      box-shadow: 0 0 10px var(--ia-primary);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .badge-pill-group span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #67e8f9;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .ia-hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 950px;
+      margin-inline: auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #67e8f9 70%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
+    }
+
+    .ia-hero p.lead-desc {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.6;
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-btn-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn-ia {
+      background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px var(--ia-primary-glow);
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 999px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-ia:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(6, 182, 212, 0.45);
+      filter: brightness(1.1);
+    }
+
+    .btn-ia-outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-ia-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--ia-primary);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    .hero-metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--ia-card-border);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .metric-item {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .metric-value span {
+      color: var(--ia-primary);
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* CARD STYLING */
+    .ia-card {
+      background: var(--ia-card-bg);
+      border: 1px solid var(--ia-card-border);
+      border-radius: 16px;
+      padding: clamp(24px, 4vw, 36px);
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ia-card:hover {
+      border-color: var(--ia-card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .ia-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .ia-card:hover::before {
+      opacity: 1;
+    }
+
+    /* SECTION HEADERS */
+    .section-title-wrap {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto clamp(40px, 6vw, 60px);
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ia-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title-wrap h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title-wrap p {
+      color: #94a3b8;
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.6;
+    }
+
+    /* PILLARS GRID */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .pillar-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--ia-primary);
+    }
+
+    .ia-card h3 {
+      font-size: 1.35rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .ia-card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .pillar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .pillar-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* PROGRAM JOURNEY ROADMAP */
+    .journey-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      position: relative;
+    }
+
+    .timeline-step {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--ia-card-border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      position: relative;
+    }
+
+    .timeline-step .step-number {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ia-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .timeline-step h4 {
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .timeline-step p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* AUDIENCE & FIT */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .audience-card {
+      border-left: 3px solid var(--ia-primary);
+    }
+
+    /* DETAILS & LOGISTICS */
+    .details-table-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--ia-card-border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .detail-value {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* REGISTRATION / CTA CARD */
+    .cta-banner {
+      background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.15) 0%, rgba(15, 23, 42, 0.9) 70%);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      border-radius: 20px;
+      padding: clamp(40px, 6vw, 70px) 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 32px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--ia-card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      cursor: pointer;
+    }
+
+    .faq-icon {
+      font-size: 1.25rem;
+      color: var(--ia-primary);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .detail-value {
+        text-align: left;
+      }
+      .hero-btn-row {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-ia, .btn-ia-outline {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Ambient background elements -->
+  <div class="ambient-bg">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="../../index.html#top" class="brand" aria-label="Theory to Trade Home">
+        <img src="../../images/logos/t2t.png" alt="Theory to Trade by TRACE logo" loading="eager" />
+        <strong>
+          <span class="brand-full">Theory to Trade (T2T) by TRACE</span>
+          <span class="brand-short">T2T by TRACE</span>
+        </strong>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../../index.html#about">About</a></li>
+          <li class="dropdown">
+            <a href="../../index.html#programs" aria-haspopup="true">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg></a>
+            <ul class="dropdown-menu">
+              <li><a href="../../index.html#programs">Community Programs</a></li>
+              <li><a href="../../corporate-programs/index.html">Corporate Programs</a></li>
+              <li><a href="../crisp/index.html">CRISP</a></li>
+              <li><a href="../aix/index.html">AI-X</a></li>
+              <li><a href="../leadx/index.html">Lead-x</a></li>
+              <li><a href="../ifap/index.html">IFAP</a></li>
+              <li><a class="active" href="index.html">Innovation Academy</a></li>
+            </ul>
+          </li>
+          <li><a href="../../index.html#events">Events</a></li>
+          <li><a href="../../index.html#testimonials">Alumni</a></li>
+          <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <a href="#register" class="btn btn-ia" style="padding: 8px 20px; font-size: 0.9rem; min-height: 38px;">Apply Now</a>
+        <button class="menu btn secondary" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+      </div>
+    </div>
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileNav" class="container hide" role="dialog" aria-modal="false">
+      <nav>
+        <ul style="display:grid; gap:8px; padding:12px 0">
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#programs">All Programs</a></li>
+          <li><a href="../crisp/index.html">CRISP</a></li>
+          <li><a href="../aix/index.html">AI-X</a></li>
+          <li><a href="../leadx/index.html">Lead-x</a></li>
+          <li><a href="../ifap/index.html">IFAP</a></li>
+          <li><a class="active" href="index.html">Innovation Academy</a></li>
+          <li><a href="../../corporate-programs/index.html">Corporate Programs</a></li>
+          <li><a href="../../index.html#events">Events</a></li>
+          <li><a href="https://trace.lk/" target="_blank" rel="noopener">Visit TRACE</a></li>
+          <li><a href="#register" class="btn btn-ia" style="text-align: center; margin-top: 10px;">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. HERO SECTION -->
+    <section class="ia-hero" aria-label="Innovation Academy Hero">
+      <div class="container">
+        <div class="badge-pill-group">
+          <div class="badge-dot"></div>
+          <span>TRACE Expert City &bull; Innovation Cohort</span>
+        </div>
+
+        <h1>
+          Transform Groundbreaking Ideas Into <span class="gradient-text">Market Reality</span>
+        </h1>
+
+        <p class="lead-desc">
+          The <strong>T2T Innovation Academy</strong> is an elite incubator for ambitious builders, technologists, and innovators. Progress from problem discovery and rapid deep tech prototyping to commercial product deployment and venture creation.
+        </p>
+
+        <div class="hero-btn-row">
+          <a href="#register" class="btn btn-ia">
+            <span>Register Your Interest</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#curriculum" class="btn btn-ia-outline">Explore Pillars</a>
+          <a href="https://trace.lk/" target="_blank" rel="noopener" class="btn btn-ia-outline">Visit TRACE Ecosystem</a>
+        </div>
+
+        <!-- Metric highlights -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <div class="metric-value">16<span> Weeks</span></div>
+            <div class="metric-label">Intensive Cohort</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">1-on-1</div>
+            <div class="metric-label">Industry Mentorship</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Hands-on R&amp;D / Labs</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value">Demo<span> Day</span></div>
+            <div class="metric-label">Investor Pitch Forum</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW / ABOUT -->
+    <section id="about" style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="grid cols-2" style="gap: 32px; align-items: center;">
+          <div class="ia-card">
+            <span class="section-tag">Why Innovation Academy?</span>
+            <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); color: #fff; margin-bottom: 16px;">
+              Closing the chasm between <span style="color: var(--ia-primary);">Theory</span> and <span style="color: var(--ia-accent);">Trade</span>.
+            </h2>
+            <p>
+              Sri Lanka is home to remarkable technical talent and academic excellence. Yet, countless brilliant ideas and research prototypes never reach commercial readiness due to the lack of product engineering rigor, market alignment, and venture architecture.
+            </p>
+            <p>
+              Established at TRACE Expert City, the nucleus of Sri Lanka's technology and knowledge ecosystem, the Innovation Academy provides the mentorship, tooling, lab environments, and industry connections necessary to take your invention to national and international markets.
+            </p>
+          </div>
+
+          <div class="grid" style="gap: 16px;">
+            <div class="ia-card audience-card">
+              <h3 style="color: var(--ia-primary); font-size: 1.15rem;">Validated Product Ideation</h3>
+              <p style="margin: 0; font-size: 0.9rem;">Move beyond assumptions. Apply real design sprint frameworks, customer development interviews, and rigorous technical feasibility studies.</p>
+            </div>
+            <div class="ia-card audience-card" style="border-left-color: var(--ia-secondary);">
+              <h3 style="color: var(--ia-secondary); font-size: 1.15rem;">Engineering Rigor &amp; AI Integration</h3>
+              <p style="margin: 0; font-size: 0.9rem;">Architect production-grade backbones leveraging modern cloud architectures, artificial intelligence, edge IoT, and automated pipelines.</p>
+            </div>
+            <div class="ia-card audience-card" style="border-left-color: var(--ia-accent);">
+              <h3 style="color: var(--ia-accent); font-size: 1.15rem;">Intellectual Property &amp; Commercialization</h3>
+              <p style="margin: 0; font-size: 0.9rem;">Learn how to protect your patents and trade secrets, structure viable business units, and present convincingly to global investors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CURRICULUM & PILLARS -->
+    <section id="curriculum" style="padding: clamp(60px, 8vw, 100px) 0; background: rgba(15, 23, 42, 0.45);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Core Pillars</span>
+          <h2>The Four Pillars of Technological Innovation</h2>
+          <p>A comprehensive roadmap built to transform abstract concepts into engineered, battle-tested solutions ready for commercial adoption.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="ia-card">
+            <div class="pillar-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3>1. Deep Tech &amp; AI Engineering</h3>
+            <p>Harness cutting-edge computing paradigms: foundational AI models, agentic workflows, distributed backend systems, and hardware-software integration.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Generative AI</span>
+              <span class="pillar-tag">Edge Computing</span>
+              <span class="pillar-tag">System Architecture</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="ia-card">
+            <div class="pillar-icon-box" style="background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.25); color: var(--ia-secondary);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3>2. Rapid Prototyping &amp; MVP Labs</h3>
+            <p>Build, test, break, and iterate. Translate theoretical blueprints into functional interactive prototypes within TRACE's collaborative innovation spaces.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Rapid Iteration</span>
+              <span class="pillar-tag">Hardware/IoT Labs</span>
+              <span class="pillar-tag">Usability Testing</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="ia-card">
+            <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.25); color: var(--ia-accent);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3>3. Product Architecture &amp; UX</h3>
+            <p>Design products that people actually want and can use effortlessly. Master human-centered design, user feedback loops, and intuitive data interfaces.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Design Thinking</span>
+              <span class="pillar-tag">UI/UX Strategy</span>
+              <span class="pillar-tag">User Journeys</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="ia-card">
+            <div class="pillar-icon-box" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.25); color: var(--ia-gold);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>4. Venture Packaging &amp; IP Strategy</h3>
+            <p>Structure intellectual property, navigate patents, formulate financial models, and craft persuasive venture pitch materials for private capital or enterprise licensing.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">IP Rights</span>
+              <span class="pillar-tag">Financial Modeling</span>
+              <span class="pillar-tag">Pitch Decks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROGRAM JOURNEY -->
+    <section id="journey" style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Program Roadmap</span>
+          <h2>The 16-Week Acceleration Journey</h2>
+          <p>A step-by-step phased approach from problem validation to commercial presentation.</p>
+        </div>
+
+        <div class="journey-timeline">
+          <div class="timeline-step">
+            <span class="step-number">Phase 1 &bull; Weeks 1–4</span>
+            <h4>Discovery &amp; Problem Validation</h4>
+            <p>Identify unmet market needs, define core value propositions, conduct user discovery sprints, and benchmark competitive landscapes.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="step-number">Phase 2 &bull; Weeks 5–8</span>
+            <h4>Technical Architecture &amp; R&amp;D</h4>
+            <p>Evaluate hardware/software trade-offs, spin up development sandboxes, build initial proof-of-concept spikes, and integrate core AI/data layers.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="step-number">Phase 3 &bull; Weeks 9–12</span>
+            <h4>MVP Build &amp; User Testing</h4>
+            <p>Assemble interactive prototypes, conduct real-user stress testing, iterate based on empirical feedback, and refine operational reliability.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="step-number">Phase 4 &bull; Weeks 13–16</span>
+            <h4>Go-To-Market &amp; Demo Day</h4>
+            <p>Finalize product dossiers, IP protection blueprints, business proposals, and pitch live to institutional investors, venture partners, and corporate leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHO SHOULD APPLY -->
+    <section id="audience" style="padding: clamp(60px, 8vw, 100px) 0; background: rgba(15, 23, 42, 0.45);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Target Profile</span>
+          <h2>Who Belongs in the Academy</h2>
+          <p>Designed for individuals and early-stage teams committed to building high-impact technology solutions.</p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="ia-card">
+            <h3>Emerging Technologists &amp; Engineers</h3>
+            <p>Graduates and early-career software, electronics, or biomedical engineers eager to move beyond ordinary code and create transformative intellectual property.</p>
+          </div>
+          <div class="ia-card">
+            <h3>Aspiring Tech Founders</h3>
+            <p>Individuals with high-conviction concepts looking for the technical rigor, mentorship network, and validation needed to launch an investable venture.</p>
+          </div>
+          <div class="ia-card">
+            <h3>R&amp;D Researchers &amp; Inventors</h3>
+            <p>Academics, postgrads, or hobbyist innovators with working research papers or prototypes ready to be transformed into commercial-grade products.</p>
+          </div>
+          <div class="ia-card">
+            <h3>Corporate Intrapreneurs</h3>
+            <p>Enterprise innovators seeking to build internal spin-offs, disruptive workflows, and agile new business units within established firms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROGRAM DETAILS & SCHEDULE -->
+    <section id="details" style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="grid cols-2" style="gap: 32px; align-items: center;">
+          <div>
+            <span class="section-tag">Key Specifications</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.6rem); color: #fff; margin-bottom: 20px;">
+              Designed for High Intensity &amp; Real Outcomes
+            </h2>
+            <p style="color: #94a3b8; line-height: 1.6; margin-bottom: 24px;">
+              The Innovation Academy is built around active doing, not passive lectures. You will work side-by-side with experienced practitioners, industry veterans, and startup founders who have built and exited global technology ventures.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <span class="badge" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9; border-color: rgba(6, 182, 212, 0.3);">TRACE Expert City</span>
+              <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd; border-color: rgba(139, 92, 246, 0.3);">Hybrid Format</span>
+              <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3);">Certificate of Completion</span>
+            </div>
+          </div>
+
+          <div class="details-table-card">
+            <div class="detail-row">
+              <span class="detail-label">Program Duration</span>
+              <span class="detail-value">16 Weeks (Saturdays &amp; Labs)</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">TRACE Expert City, Maradana, Colombo 10</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Format</span>
+              <span class="detail-value">In-person Masterclasses &amp; Virtual Mentorship</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Cohort Size</span>
+              <span class="detail-value">Strictly Limited to 30 Selected Seats</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Admissions</span>
+              <span class="detail-value">Application Review &amp; Selection Interview</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Inquiries Hotline</span>
+              <span class="detail-value">+94 77 764 3129 / info@trace.lk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. APPLICATION / CTA -->
+    <section id="register" style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="badge-pill-group" style="margin-bottom: 16px;">
+            <div class="badge-dot"></div>
+            <span>Applications Open Soon</span>
+          </div>
+          <h2>Ready to Build the Future?</h2>
+          <p>
+            Be among the visionary pioneers in the inaugural cohort of the T2T Innovation Academy. Express your interest today to receive early access, cohort schedules, and detailed application guidelines.
+          </p>
+          <div class="hero-btn-row" style="margin-bottom: 24px;">
+            <a href="https://forms.gle/xPPyZCp4LB5qKd237" target="_blank" rel="noopener" class="btn btn-ia">
+              <span>Register Your Interest / Apply</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="mailto:info@trace.lk?subject=Inquiry%20regarding%20T2T%20Innovation%20Academy" class="btn btn-ia-outline">
+              <span>Contact Admissions Team</span>
+            </a>
+          </div>
+          <p style="font-size: 0.9rem; color: #94a3b8; margin: 0;">
+            Questions? Contact us directly at <a href="mailto:info@trace.lk" style="color: var(--ia-primary); text-decoration: underline;">info@trace.lk</a> or visit TRACE Expert City.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section id="faq" style="padding: clamp(60px, 8vw, 100px) 0; background: rgba(15, 23, 42, 0.45);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Learn more about eligibility, commitment, and what to expect during the Innovation Academy.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I need a finalized product or existing startup to apply?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              No. You can apply with a clear problem statement, a working hypothesis, or an early prototype. We evaluate applicants primarily based on problem insight, technical capability, commitment, and coachability.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I apply as an individual or do I need a team?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Both individuals and small teams (up to 3 members) are eligible. Solo builders will have opportunities during the initial weeks to collaborate and find complementary co-builders within the cohort.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the weekly time commitment?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The academy requires approximately 8–10 hours per week, consisting of weekend masterclasses/labs at TRACE Expert City and self-directed prototyping hours with weekly mentor check-ins.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does TRACE or T2T take equity in our inventions or IP?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              No. All intellectual property developed by you during the academy remains 100% your own. Our mission is to accelerate Sri Lanka's high-tech innovation pipeline and build commercial champions.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where will physical sessions take place?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Physical workshops and lab sessions are conducted at TRACE Expert City, Maradana, Colombo 10 — Sri Lanka's leading technology hub home to top tech enterprises, accelerators, and research facilities.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="../../images/logos/t2t.png" alt="T2T logo" style="height: 28px;" />
+          <small>&copy; <span id="year"></span> Theory to Trade by TRACE. All rights reserved.</small>
+        </div>
+        <div>
+          <small>
+            <a href="../../privacy_policy/index.html" style="text-decoration: underline; opacity: 0.8; margin-right: 16px;">Privacy Policy</a>
+            <a href="../../index.html" style="text-decoration: underline; opacity: 0.8;">Home</a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('hide');
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+      // Close mobile menu on anchor click
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hide');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Auto update copyright year
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Interactive FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close other FAQs
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+
+        // Toggle current FAQ
+        item.classList.toggle('active', !isActive);
+      });
+    });
+  </script>
+</body>
+
+</html>
+
